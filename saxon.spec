@@ -9,7 +9,7 @@ Release:	1
 Vendor:		Michael Kay
 License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
-Source0:	http://dl.sf.net/%{name}/%{name}%{_ver}.zip
+Source0:	http://dl.sourceforge.net/%{name}/%{name}%{_ver}.zip
 # Source0-md5:	6a822530943cc9ddff45ed4d77413d89
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
 # Source1-md5:	8871a018e1de23b77b2c0bce86176d60
