@@ -9,10 +9,6 @@ Release:	1
 Vendor:		Michael Kay
 License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
-Group(de):	Applikationen/Publizieren/XML
-Group(es):	Aplicaciones/Editoración/XML
-Group(pl):	Aplikacje/Publikowanie/XML
-Group(pt_BR):	Aplicações/Editoração/XML
 Source0:	http://users.iclway.co.uk/mhkay/saxon/%{name}%{version}/%{name}.zip
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
 Source2:	http://www.kosek.cz/xml/saxon/crimson.jar
