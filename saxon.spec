@@ -14,6 +14,7 @@ Source0:	http://dl.sourceforge.net/%{name}/%{name}%{_ver}.zip
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
 # Source1-md5:	8871a018e1de23b77b2c0bce86176d60
 URL:		http://users.iclway.co.uk/mhkay/saxon/
+BuildRequires:	unzip
 Requires:	jre
 Requires:	xml-commons
 Requires:	jaxp_parser_impl
