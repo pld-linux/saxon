@@ -18,13 +18,14 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 BuildArch:	noarch
 AutoReqProv:    0
 
-
 %define	_javaclassdir	%{_datadir}/java/classes
 %define	_jredir		%{_libdir}/jre
 
 %description
+XSLT Processor in Java.
 
 %description -l pl 
+Procesor XSLT napisany w Javie.
 
 %prep
 %setup -q -c -T
@@ -34,11 +35,9 @@ chmod -R a+rX *
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_javaclassdir}
+
 install %{name}.jar $RPM_BUILD_ROOT%{_javaclassdir}
-
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT%{_javaclassdir}
-
-#gzip -9nf copying.txt
 
 %clean
 rm -rf $RPM_BUILD_ROOT
