@@ -7,7 +7,7 @@ Name:		saxon
 Version:	6.0.2
 Release:	1
 Vendor:		Michael Kay
-License:	Mozilla Public License, some parts on other license (Distributable)
+License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
 Group(pl):	Aplikacje/Publikowanie/XML
 URL:		http://users.iclway.co.uk/mhkay/saxon/
