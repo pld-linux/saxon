@@ -1,7 +1,7 @@
 Summary:	XSLT Processor in Java
 Summary(pl):	Procesor XSLT napisany w Javie
 Name:		saxon
-# 
+#
 # Please contact me before upgrading from 6.0.2
 # Since version 6.2 version the API has changed /klakier
 Version:	6.0.2
@@ -24,7 +24,7 @@ AutoReqProv:	0
 %description
 XSLT Processor in Java.
 
-%description -l pl 
+%description -l pl
 Procesor XSLT napisany w Javie.
 
 %prep
