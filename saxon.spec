@@ -12,6 +12,7 @@ Group:		Applications/Publishing/XML
 # new version:	http://dl.sourceforge.net/saxon/saxon6_5_2.zip
 Source0:	http://users.iclway.co.uk/mhkay/saxon/%{name}%{version}/%{name}.zip
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
+# Source1-md5:	8871a018e1de23b77b2c0bce86176d60
 # already in other packages (crimson, jaxp)
 # ...but this version has org.w3c.dom.{html,range,traversal} not present in other ones???
 #Source2:	http://www.kosek.cz/xml/saxon/crimson.jar
