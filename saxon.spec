@@ -15,7 +15,7 @@ Source0:	http://users.iclway.co.uk/mhkay/saxon/%{name}%{version}/%{name}.zip
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
 Source2:	http://www.kosek.cz/xml/saxon/crimson.jar
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Requires:	java
+Requires:	jre
 BuildArch:	noarch
 AutoReqProv:    0
 
