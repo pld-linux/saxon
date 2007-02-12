@@ -2,7 +2,7 @@
 %define		_ver		6-5-5
 
 Summary:	XSLT Processor in Java
-Summary(pl.UTF-8):   Procesor XSLT napisany w Javie
+Summary(pl.UTF-8):	Procesor XSLT napisany w Javie
 Name:		saxon
 Version:	%{ver}
 Release:	1
