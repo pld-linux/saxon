@@ -1,11 +1,5 @@
 #
 # Conditional build:
-%if "%{pld_release}" == "ti"
-%bcond_without	java_sun	# build with gcj
-%else
-%bcond_with	java_sun	# build with java-sun
-%endif
-#
 %define		ver		6.5.5
 %define		_ver		6-5-5
 #
@@ -26,7 +20,7 @@ Source2:	%{name}-build.xml
 URL:		http://saxon.sourceforge.net/
 %if %{with java_sun}
 BuildRequires:	ant
-BuildRequires:	java-sun
+BuildRequires:	jdk
 %else
 BuildRequires:	ant >= 1.7.1-3
 BuildRequires:	java-gcj-compat-devel
