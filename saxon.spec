@@ -1,3 +1,5 @@
+# TODO:
+# - update to version 9, but save it as saxon6.spec
 #
 # Conditional build:
 %define		ver		6.5.5
