@@ -12,27 +12,22 @@ Version:	%{ver}
 Release:	2
 License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
-Source0:	http://dl.sourceforge.net/saxon/%{name}%{_ver}.zip
+Source0:	http://downloads.sourceforge.net/saxon/%{name}%{_ver}.zip
 # Source0-md5:	e913002af9c6bbb4c4361ff41baac3af
 Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
 # Source1-md5:	8871a018e1de23b77b2c0bce86176d60
 Source2:	%{name}-build.xml
 URL:		http://saxon.sourceforge.net/
-%if %{with java_sun}
 BuildRequires:	ant
-BuildRequires:	jdk
-%else
-BuildRequires:	ant >= 1.7.1-3
-BuildRequires:	java-gcj-compat-devel
-%endif
 BuildRequires:	java-jdom
 BuildRequires:	java-xml-commons
+BuildRequires:	jdk
 BuildRequires:	jpackage-utils
 BuildRequires:	rpm-javaprov
 BuildRequires:	unzip
+Requires:	java(jaxp_parser_impl)
 Requires:	java-jdom
 Requires:	java-xml-commons
-Requires:	jaxp_parser_impl
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
