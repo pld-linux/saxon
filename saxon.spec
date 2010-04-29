@@ -16,11 +16,10 @@ License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
 Source0:	http://downloads.sourceforge.net/saxon/%{name}%{_ver}.zip
 # Source0-md5:	e913002af9c6bbb4c4361ff41baac3af
-Source1:	http://www.kosek.cz/xml/saxon/kosek.jar
-# Source1-md5:	8871a018e1de23b77b2c0bce86176d60
 Source2:	%{name}-build.xml
 URL:		http://saxon.sourceforge.net/
 BuildRequires:	ant
+BuildRequires:	glibc-localedb-all
 BuildRequires:	java-jdom
 BuildRequires:	java-xml-commons
 BuildRequires:	jdk
@@ -61,24 +60,32 @@ unzip -q source.zip
 %build
 export JAVA_HOME="%{java_home}"
 export CLASSPATH=$(build-classpath xml-commons-apis jdom)
+export LC_ALL=en_US # source code not US-ASCII
 %ant
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_javadir},%{_javadocdir}/%{name}-%{version}}
 
-install build/lib/saxon*.jar $RPM_BUILD_ROOT%{_javadir}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_javadir}
+install build/lib/saxon.jar $RPM_BUILD_ROOT%{_javadir}/%{name}-%{version}.jar
+install build/lib/saxon-jdom.jar $RPM_BUILD_ROOT%{_javadir}/%{name}-jdom-%{version}.jar
+ln -s %{name}-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}.jar
+ln -s %{name}-jdom-%{version}.jar $RPM_BUILD_ROOT%{_javadir}/%{name}-jdom.jar
 
 cp -a build/api/* $RPM_BUILD_ROOT/%{_javadocdir}/%{name}-%{version}
+ln -s %{name}-%{version} $RPM_BUILD_ROOT%{_javadocdir}/%{name} # ghost symlink
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{_javadir}/*.jar
+%{_javadir}/saxon-jdom.jar
+%{_javadir}/saxon-jdom-%{version}.jar
+%{_javadir}/saxon.jar
+%{_javadir}/saxon-%{version}.jar
 
 %files javadoc
 %defattr(644,root,root,755)
 %{_javadocdir}/%{name}-%{version}
+%ghost %{_javadocdir}/%{name}
