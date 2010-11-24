@@ -12,7 +12,7 @@ Summary:	XSLT Processor in Java
 Summary(pl.UTF-8):	Procesor XSLT napisany w Javie
 Name:		saxon
 Version:	%{ver}
-Release:	2
+Release:	3
 License:	Mozilla Public License, some parts on other license (distributable)
 Group:		Applications/Publishing/XML
 Source0:	http://downloads.sourceforge.net/saxon/%{name}%{_ver}.zip
