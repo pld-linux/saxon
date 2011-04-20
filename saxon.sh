@@ -6,4 +6,6 @@
 CLASSPATH=$(find-jar saxon)
 MAIN_CLASS=com.icl.saxon.StyleSheet
 
-run ${1:+$@}
+# Note: there is 'exec' inside run in new jpackage-utils (1.7.5), however there
+# is no exec in older one (1.7.3), so do not remove exec here.
+exec run ${1:+$@}
