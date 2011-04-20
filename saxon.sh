@@ -6,4 +6,4 @@
 CLASSPATH=$(find-jar saxon)
 MAIN_CLASS=com.icl.saxon.StyleSheet
 
-run ${1:+$@}
+exec run ${1:+$@}
