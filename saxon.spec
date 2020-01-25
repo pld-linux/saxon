@@ -6,7 +6,6 @@
 %define		ver		6.5.5
 %define		_ver		6-5-5
 #
-%include	/usr/lib/rpm/macros.java
 #
 Summary:	XSLT Processor in Java
 Summary(pl.UTF-8):	Procesor XSLT napisany w Javie
